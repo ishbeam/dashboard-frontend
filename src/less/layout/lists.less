@@ -1,0 +1,55 @@
+.compact {
+  label {
+    font-size: 16px;
+    color: #000;
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    left: 0;
+  }
+  p {
+    font-size: 14px;
+  }
+}
+
+
+.compact.radio {
+  .full-width; 
+  label {
+    background-color: transparent;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+
+  .icon {
+    border-radius: 50em;
+    height: 24px;
+    width: 24px;
+    background-color: @grey2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid @grey2;
+
+    .icon_inner {
+        height: 14px;
+        width: 14px;
+        background-color: transparent;
+        border-radius: 50em;
+    }
+  }
+
+  .icon.active {
+    background-color: #fff;
+    border: 2px solid @blue;
+
+    .icon_inner {
+        height: 14px;
+        width: 14px;
+        background-color: @blue;
+        border-radius: 50em;
+    }
+  }
+}

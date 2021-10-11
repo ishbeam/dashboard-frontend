@@ -1,0 +1,59 @@
+.switcher {
+  text-align: center;
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+      float: left;
+      width: 90px;
+      height: 40px;
+      line-height: 40px;
+      cursor: pointer;
+      font-size: 16px;
+      color: #FFFFFF; 
+      transition: 0.4s all;
+    }
+    li.active {
+      color: #000;
+    }
+  }
+  
+
+}
+.switcher .fieldset {
+  display: inline-block;
+  position: relative;
+  padding: 2px;
+  border-radius: 50em;
+  border: 1px solid rgba(255,255,255,0.3);
+  background-color: rgba(255,255,255,0.1);
+}
+
+.switcher .switch {
+  /* floating background */
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  height: 36px;
+  width: 86px;
+  background-color: #fff;
+  border-radius: 50em;
+  // -webkit-transition: -webkit-transform 0.5s;
+  // -moz-transition: -moz-transform 0.5s;
+  // transition: transform 0.5s; 
+  transition: left 0.5s;
+}
+.switcher input[type="radio"]:checked + label + .switch,
+.switcher input[type="radio"]:checked + label:nth-of-type(n) + .switch {
+  /* use label:nth-of-type(n) to fix a bug on safari with multiple adjacent-sibling selectors*/
+  -webkit-transform: translateX(90px);
+  -moz-transform: translateX(90px);
+  -ms-transform: translateX(90px);
+  -o-transform: translateX(90px);
+  transform: translateX(90px);
+}

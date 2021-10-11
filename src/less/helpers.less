@@ -1,0 +1,101 @@
+.full-width {
+  width: 100%;
+}
+
+.full-width-viewport {
+  width: 100vw;
+  overflow: scroll;
+}
+
+.full-height-viewport {
+  height: 100vh;
+  overflow: scroll;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.block {
+  display: block;
+}
+
+.relative {
+  position: relative;
+}
+
+.pull-right {
+  float: right;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center; 
+}
+
+.text-left {
+  text-align: left;
+}
+
+.list-style-none {
+  list-style: none;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #e6e6e6;
+}
+.border-top {
+  border-top: 1px solid @grey2;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.visible-overflow {
+  overflow: visible;
+}
+
+.underline {
+  border-bottom: 2px solid;
+}
+
+.shimmer {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background: #f6f7f8;
+  background: linear-gradient(to right, #f4f4f4 8%, #e8e8e8 38%, #f4f4f4 54%);
+  background-size: 1000px 640px;  
+  border-radius: 4px;
+}
+
+@keyframes placeHolderShimmer{
+    0%{
+        background-position: -468px 0
+    }
+    100%{
+        background-position: 468px 0
+    }
+}
+
+.br-1 {
+  border-radius: 4px;
+}
+.br-2 {
+  border-radius: 4px;
+}
+

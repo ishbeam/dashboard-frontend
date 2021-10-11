@@ -1,0 +1,23 @@
+.mq-screen-md-min({
+  .distribute {
+    // ie fall back
+    display: inline-block;
+
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .distribute-inline { display: inline-flex }
+  .distribute-vertical { flex-direction: column }
+  .distribute-horizontal { flex-direction: row }
+  .distribute-start { align-items: flex-start }
+  .distribute-center { 
+      // ie fall back
+      // margin: 0 auto;
+      // text-align: center;
+      -ms-flex-align:center;
+      align-items: center; justify-content: center; 
+  }
+  .distribute-end { align-items: flex-end; justify-content: flex-end; }
+  .distribute-between {align-items: center; justify-content: space-between;}
+});

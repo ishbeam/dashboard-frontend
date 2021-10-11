@@ -1,0 +1,151 @@
+#form-nav {
+	border-bottom: 1px solid #D0D0D0;
+	background-color: #fff;
+	position: fixed;
+    width: 100%;
+    overflow: hidden;
+    z-index: 11;
+
+	.close-btn {
+	  	position: relative;
+		// width: 32px;
+		// height: 32px;
+		display: block;
+		// justify-content: center;
+		// align-items: center;
+		border: none;
+		border-radius: 0;
+	  	border-color: transparent;
+	  	padding: 32px 34px;
+	  	outline: none;
+	  	background-color: transparent;
+	  	transition: background-color 0.2s;
+
+	  .icon {
+	    position: absolute;
+	    width: 16px;
+	    top: 0;
+    	height: 68px;
+	    left: 26px;
+	    color: @darkBlue;
+	    font-size: 16px;
+	  }
+
+	  &:hover {
+	  	background-color: #d8d8d9;
+	  	cursor: pointer;
+	  }
+
+	  &:after {
+	  	height: 100%;
+	  	width: 1px;
+	  	background-color: #D0D0D0;
+	  	content: '';
+	  	top: 0;
+	  	right: 0;
+	  	position: absolute;
+	  }
+	}
+ 
+
+	.steps {
+		display: inline;
+		position: relative; 
+		margin: 0;
+		padding: 0;
+		margin-bottom: -4px;
+
+		li {
+			display: inline-block;
+			position: relative;
+			overflow: hidden;
+			.fontRegular;
+			.fontSize0;
+			padding-right: @unit * 4;
+			padding: 21px 32px;
+			opacity: 0.8;
+  
+			.number {
+				color: #7A7A7A;
+				font-size: 12px;
+				margin-right: 8px;
+				background-color: #D8D8D8;
+				border-radius: 50em;
+			    padding: 1.5px 10px;
+			}  
+
+			&:hover {
+				cursor: pointer;
+			}
+		}  
+
+		li.active-item {
+			opacity: 1;
+
+			.number {
+				background-color: @blue;
+				color: #fff;
+			}
+			
+			&:after {
+				background-color: @blue;
+				content: '';
+				position: absolute;
+				bottom: 0;
+				height: 3px;
+				width: 100%;
+				left: 0;
+
+			}
+		}
+	}
+
+	.submit-btn {
+		background-color: @blue;
+		border: none;
+		color: #fff;
+    	padding: 22px 42px;
+    	text-transform: uppercase;
+    	.fontSemiBold;
+    	.fontSize0;
+    	letter-spacing: 1px;
+    	border-radius: 0;
+    	transition: background-color 0.2s;
+
+    	&:hover {
+    		cursor: pointer;
+    		background-color: @darkBlue;
+    	}
+	}
+
+	.submit-btn.false {
+		opacity: 0.4;
+
+		&:hover {
+    		cursor: not-allowed; 
+    		background-color: @darkBlue;
+    	}
+	}
+}
+
+ 
+
+#form-nav.dark {
+	background-color: @darkBlue;
+
+	.close-btn {
+		&:after {
+			background-color: #fff;
+			opacity: 0.4;
+		}
+
+		&:hover {
+		  	background-color: @blue;
+		  	cursor: pointer;
+		  }
+
+		.icon {
+			color: #fff;
+		}
+	}
+}
